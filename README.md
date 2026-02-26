@@ -103,6 +103,5 @@ Use real-time traffic data
 
 Add interactive dashboard
 
-👩‍💻 Author
-
+Author :
 Souvik Sen (Full Stack Developer)
