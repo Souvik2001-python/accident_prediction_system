@@ -1,0 +1,153 @@
+/* ================================= */
+/* REMOVE DEFAULT STREAMLIT SPACING  */
+/* ================================= */
+
+/* Hide Streamlit top header */
+/* header[data-testid="stHeader"] {
+    display: none !important;
+} */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.stApp {
+    height: 100vh;
+    width: 100vw;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+}
+
+/* Remove white background from content */
+.block-container {
+    background: transparent !important;
+    padding: 2rem !important;
+    /* padding-top: 0rem !important; */
+}
+
+/* ================================= */
+/* DARK OVERLAY                      */
+/* ================================= */
+
+.stApp::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    z-index: 0;
+}
+
+/* Make content above overlay */
+.main {
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+/* ================================= */
+/* SIDEBAR                           */
+/* ================================= */
+
+[data-testid="stSidebar"] {
+    width: 350px !important;
+    min-width: 350px !important;
+    max-width: 350px !important;
+    background: #121824 !important;
+}
+
+/* ================================= */
+/* TITLE + TEXT                      */
+/* ================================= */
+
+h1 {
+    font-size: 50px !important;
+    font-weight: 800 !important;
+    color: white !important;
+}
+
+p {
+    font-size: 20px !important;
+    color: #e5e7eb !important;
+}
+
+
+/* Make Predict button red */
+div.stButton > button {
+    background: linear-gradient(135deg, #dc3545, #a71d2a) !important;
+    color: white !important;
+    font-weight: 500;
+    border-radius: 8px;
+    height: 100%;
+    width: 120%;
+    border: none;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+    margin-top: 25px;
+}
+
+/* Hover effect */
+div.stButton > button:hover {
+    background: linear-gradient(135deg, #bb2d3b, #842029) !important;
+    transform: scale(1.05);
+}
+
+
+/* ================================= */
+/* FOOTER                            */
+/* ================================= */
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 350px;
+    width: calc(100% - 350px);
+    text-align: center;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    z-index: 2;
+    font-size: 12px;
+}
+
+/* Floating alert at top right */
+.custom-alert {
+    position: fixed;
+    top: 70px;
+    right: 30px;
+    background: linear-gradient(135deg, #198754, #145c32);
+    color: white;
+    padding: 20px 20px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 250;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+    z-index: 9999;
+
+    animation: slideIn 0.4s ease-out,
+               fadeOut 0.6s ease-in 4.4s forwards;
+}
+
+/* Slide animation */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Fade out */
+@keyframes fadeOut {
+    to {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(50px);
+    }
+}
