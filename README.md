@@ -51,10 +51,6 @@ Model Selection
 
 Logistic Regression
 
-Decision Tree
-
-Random Forest
-
 (Add any other models you used)
 
 📈 Evaluation Metrics
