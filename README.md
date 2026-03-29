@@ -23,10 +23,6 @@ NumPy
 
 Scikit-learn
 
-Imbalanced-learn (SMOTE)
-
-Matplotlib / Seaborn
-
 Jupyter Notebook
 
 📊 Machine Learning Workflow
