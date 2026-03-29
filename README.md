@@ -15,13 +15,13 @@ Evaluate model performance using classification metrics.
 
 🛠️ Technologies Used
 
-Python
+Python,
 
-Pandas
+Pandas,
 
-NumPy
+NumPy,
 
-Scikit-learn
+Scikit-learn,
 
 Jupyter Notebook
 
